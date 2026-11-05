@@ -1731,21 +1731,102 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
 .prose a { color: var(--gold-2); text-decoration: underline; text-underline-offset: 3px; }
 .prose .updated { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-2); }
 
-/* ---------- Mobile CTA ---------- */
+/* ---------- Mobile CTA & Native App Navigation ---------- */
 .mobile-cta {
   position: fixed;
   left: 0; right: 0; bottom: 0;
   z-index: 80;
   display: none;
-  gap: 0.55rem;
-  padding: 0.6rem 0.9rem calc(0.6rem + env(safe-area-inset-bottom));
-  background: rgba(8, 8, 10, 0.94);
-  border-top: 1px solid var(--line);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
+  background: rgba(12, 12, 15, 0.92);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
-.mobile-cta .btn { flex: 1; padding: 0.85rem 0.8rem; font-size: 0.64rem; }
-.mobile-cta .icon-btn { width: 44px; height: 44px; border-radius: 50%; flex: none; }
+.mobile-cta .btn {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.mobile-cta .btn:active {
+  transform: scale(0.97);
+}
+.mobile-cta .icon-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.mobile-cta .icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.mobile-cta .icon-btn:active {
+  transform: scale(0.92);
+  background: var(--bg-hover);
+}
+
+/* Native Mobile Feel enhancements */
+@media (max-width: 720px) {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  /* Smooth native-like bottom scrolling clearance */
+  body {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+  
+  /* Touch target sizes & native active press feedback */
+  .nav__link, .btn, .icon-btn, .chip, .faq-item summary {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active, .chip:active {
+    transform: scale(0.97);
+  }
+  
+  /* Mobile full-screen drawer styling */
+  .nav {
+    border-left: 1px solid rgba(212, 175, 55, 0.15);
+    background: rgba(10, 10, 13, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  
+  /* Card touch responsiveness */
+  .service-card, .therapist-card, .contact-card, .price-table {
+    border-radius: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Horizontal scroll snapping for horizontal cards */
+  .quotes {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .quote-card {
+    scroll-snap-align: center;
+  }
+}
 
 /* ---------- Install prompt (PWA) ---------- */
 .install-prompt {
