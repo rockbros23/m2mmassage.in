@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Stylised map of the Mumbai service area">
+  <defs>
+    <linearGradient id="mBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111116"/>
+      <stop offset="1" stop-color="#08080a"/>
+    </linearGradient>
+    <radialGradient id="mGlow" cx=".52" cy=".5" r=".5">
+      <stop offset="0" stop-color="#d4af6a" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#d4af6a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#d4af6a" stroke-opacity=".07" stroke-width=".7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#mBg)"/>
+  <rect width="800" height="400" fill="url(#mGrid)"/>
+  <circle cx="430" cy="200" r="220" fill="url(#mGlow)"/>
+
+  <!-- coastline / landmass suggestion -->
+  <g fill="none" stroke="#d4af6a" stroke-linecap="round">
+    <path d="M-20 300c90-28 150-18 214 8s132 34 214 6 166-52 252-26 112 22 160 6" stroke-opacity=".18" stroke-width="1.4"/>
+    <path d="M-20 322c90-28 150-18 214 8s132 34 214 6 166-52 252-26 112 22 160 6" stroke-opacity=".09"/>
+    <path d="M92 78c54 18 84 54 90 104s18 88 58 118 74 34 96 70" stroke-opacity=".12"/>
+    <path d="M660 46c-40 28-58 66-56 112s-8 82-38 112-46 62-42 106" stroke-opacity=".1"/>
+    <path d="M250 36c-18 46-12 88 22 122s58 58 60 104-10 84 8 122" stroke-opacity=".08"/>
+  </g>
+
+  <!-- roads -->
+  <g fill="none" stroke="#a49c8e" stroke-opacity=".14">
+    <path d="M0 150h800"/>
+    <path d="M0 236h800"/>
+    <path d="M160 0v400"/>
+    <path d="M330 0v400"/>
+    <path d="M520 0v400"/>
+    <path d="M690 0v400"/>
+  </g>
+
+  <!-- blocks -->
+  <g fill="#d4af6a" fill-opacity=".06">
+    <rect x="180" y="170" width="126" height="48" rx="3"/>
+    <rect x="350" y="170" width="150" height="48" rx="3"/>
+    <rect x="540" y="170" width="126" height="48" rx="3"/>
+    <rect x="180" y="256" width="126" height="40" rx="3"/>
+    <rect x="350" y="256" width="150" height="40" rx="3"/>
+    <rect x="540" y="256" width="126" height="40" rx="3"/>
+  </g>
+
+  <!-- pin -->
+  <g transform="translate(430 190)">
+    <circle r="66" fill="#d4af6a" fill-opacity=".08"/>
+    <circle r="42" fill="#d4af6a" fill-opacity=".1"/>
+    <circle r="28" fill="none" stroke="#d4af6a" stroke-opacity=".4" stroke-dasharray="2 6"/>
+    <path d="M0-20c-9 0-16 7-16 16 0 12 16 28 16 28s16-16 16-28c0-9-7-16-16-16Z" fill="#d4af6a"/>
+    <circle cy="-4" r="5.5" fill="#0b0b0e"/>
+    <text x="0" y="58" text-anchor="middle" fill="#f0d9a8" font-family="Jost, Segoe UI, sans-serif" font-size="11" letter-spacing="3">BANDRA WEST</text>
+  </g>
+
+  <g fill="#7c7568" font-family="Jost, Segoe UI, sans-serif" font-size="9" letter-spacing="2">
+    <text x="60" y="120">ANDHERI</text>
+    <text x="650" y="120">POWAI</text>
+    <text x="60" y="360">WORLI</text>
+    <text x="650" y="360">COLABA</text>
+  </g>
+</svg>

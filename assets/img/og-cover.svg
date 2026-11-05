@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="M2M Massage — Strength meets stillness">
+  <defs>
+    <linearGradient id="ogBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14110c"/>
+      <stop offset=".55" stop-color="#0a0a0c"/>
+      <stop offset="1" stop-color="#0d0c09"/>
+    </linearGradient>
+    <radialGradient id="ogGlow" cx=".72" cy=".45" r=".55">
+      <stop offset="0" stop-color="#d4af6a" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#d4af6a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ogGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6e7c2"/>
+      <stop offset=".55" stop-color="#d4af6a"/>
+      <stop offset="1" stop-color="#a8823c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <circle cx="880" cy="315" r="360" fill="url(#ogGlow)"/>
+  <g fill="none" stroke="#d4af6a">
+    <circle cx="880" cy="315" r="250" stroke-opacity=".22"/>
+    <circle cx="880" cy="315" r="300" stroke-opacity=".1"/>
+    <circle cx="880" cy="315" r="200" stroke-opacity=".08" stroke-dasharray="2 10"/>
+  </g>
+  <g transform="translate(880 315)" fill="none" stroke="#d4af6a" stroke-opacity=".55">
+    <path d="M-96 96c-18-70-14-140 12-204 14-34 46-58 84-58s70 24 84 58c26 64 30 134 12 204" stroke-width="1.4"/>
+    <path d="M-50 20c30 24 70 24 100 0M-72 64c46 30 100 30 144 0" stroke-width="1"/>
+  </g>
+  <text x="90" y="150" fill="#d4af6a" font-family="Jost, Segoe UI, sans-serif" font-size="17" letter-spacing="8">MEN'S MASSAGE ATELIER</text>
+  <text x="88" y="268" fill="#f4efe6" font-family="Cormorant Garamond, Georgia, serif" font-size="104" letter-spacing="-2">Strength meets</text>
+  <text x="88" y="372" fill="url(#ogGold)" font-family="Cormorant Garamond, Georgia, serif" font-size="104" font-style="italic">stillness.</text>
+  <text x="90" y="446" fill="#a49c8e" font-family="Jost, Segoe UI, sans-serif" font-size="21" font-weight="300">Private male-to-male massage · Mumbai</text>
+  <line x1="90" y1="490" x2="470" y2="490" stroke="#d4af6a" stroke-opacity=".35"/>
+  <text x="90" y="540" fill="#7c7568" font-family="Jost, Segoe UI, sans-serif" font-size="16" letter-spacing="4">M2MMASSAGE.COM</text>
+</svg>
