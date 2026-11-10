@@ -1,0 +1,5 @@
+# Permanent redirect for specific spa page
+/m2m-spa-electronic-city.html /m2m-spa-electronic-city 301!
+
+# Optional: Agar saari .html files ke liye permanent redirect lagana ho toh ye bhi use kar sakte ho
+# /:file.html /:file 301!
